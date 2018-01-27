@@ -1,0 +1,23 @@
+{
+  "name": "botcoin",
+  "version": "1.0.0",
+  "description": "Makes money.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/michael_mcss/oec-2018.git"
+  },
+  "author": "Carleton University",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/michael_mcss/oec-2018/issues"
+  },
+  "homepage": "https://gitlab.com/michael_mcss/oec-2018#README",
+  "dependencies": {
+    "regression": "^2.0.1",
+    "request": "^2.83.0"
+  }
+}

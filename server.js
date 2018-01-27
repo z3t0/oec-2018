@@ -1,6 +1,7 @@
 // Import required modules.
 const request = require('request');
 const regression = require('regression');
+const http = require('http');
 
 // Define API URLs.
 const host = 'http://oec-2018.herokuapp.com';
@@ -94,7 +95,7 @@ const doRegression = function (price_data, number_of_points) {
 };
 
 // Create a function to evaluate the networth of our portfolio.
-const evaluatePortfoltio = function () {
+const evaluatePortfolio = function () {
     // Get the amount of liquid cash.
     const cash = market.portfolio.cash;
     // Store the holdings.
@@ -197,3 +198,13 @@ const do_cycle = function () {
 do_cycle();
 // Run the cycles on a regular interval.
 setInterval(do_cycle, trade_interval * 1000);
+
+// Create a request handler.
+const requestHandler = (request, response) => {
+    response.end('Hello Botcoin Server!');
+};
+
+// Create a server.
+const server = http.createServer(requestHandler);
+// Start the server.
+server.listen(process.env.PORT || 3000);
